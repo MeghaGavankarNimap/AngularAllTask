@@ -1,0 +1,11 @@
+<router-outlet></router-outlet>
+<!-- <app-child [heros]="datas"></app-child> -->
+<!-- <app-child [data]="customers"></app-child> -->
+
+<h2>Customer List</h2>
+<ul>
+  <li *ngFor="let customer of customers">
+    {{ customer.name }} - {{ customer.email }}
+    <button (click)="editCustomer(customer)">Edit</button>
+  </li>
+</ul>

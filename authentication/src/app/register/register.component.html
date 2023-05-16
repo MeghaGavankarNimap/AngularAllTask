@@ -1,0 +1,45 @@
+<p>register works!</p>
+
+<form [formGroup]="signUp" (ngSubmit)="saveuser(signUp.value)">
+    <!-- {{signUp.value|json}} -->
+  <div class="mb-3 col-sm-9">
+    <label for="exampleInputusername" class="form-label">Username</label>
+    <input type="email" class="form-control"  name="username" formControlName="username"  id="exampleInputusername" aria-describedby="emailHelp">
+    
+  </div>
+  <div class="mb-3 col-sm-9">
+    <label for="exampleInputpass" class="form-label">pass</label>
+    <input type="text" class="form-control"  name="pass" formControlName="pass"  id="examplepass" aria-describedby="passHelp">
+    
+  </div>
+  
+ 
+  <button type="submit"  value="signUp" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+
+
+<mat-card>
+  <mat-card-header>
+    <h1>User registration</h1>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Username</mat-label>
+        <input matInput  type="text" name="username" formControlName="username" placeholder="Enter Username">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input matInput  type="text"  formControlName="username" placeholder="Enter Password" >
+      </mat-form-field>
+      <button mat-raised-button color="primary">Primary</button>
+    
+      
+    </form>
+  </mat-card-content>
+</mat-card>
+
+

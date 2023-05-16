@@ -1,0 +1,50 @@
+<!-- <p>register works!</p> -->
+<!-- <p>login works!</p> -->
+
+<!-- <form [formGroup]="signIn" (ngSubmit)="login()">
+   
+  <div class="mb-3 col-sm-9">
+    <label for="exampleInputusername" class="form-label">Username</label>
+    <input type="email" class="form-control"  name="username" formControlName="username"  id="exampleInputusername" aria-describedby="emailHelp">
+    
+  </div>
+  <div class="mb-3 col-sm-9">
+    <label for="exampleInputpass" class="form-label">pass</label>
+    <input type="text" class="form-control"  name="pass" formControlName="pass"  id="examplepass" aria-describedby="passHelp">
+    
+  </div>
+  
+ 
+  <button type="submit"  value="signUp" class="btn btn-primary">Submit</button>
+</form> -->
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          
+  
+          <h3>Register  form</h3>
+          <form class="example-form" [formGroup]="signUp" (ngSubmit)="saveuser(signUp.value)">
+            <mat-form-field class="example-full-width">
+              <mat-label>Username</mat-label>
+              <input matInput name="username" formControlName="username">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Password</mat-label>
+              <input matInput name="pass" formControlName="pass">
+            </mat-form-field>
+          
+            <button mat-raised-button color="primary">Register</button>
+  
+            
+          </form>
+          
+          
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
