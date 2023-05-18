@@ -15,6 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { Ng2SearchPipe } from 'ng2-search-filter';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { ChildComponent } from './child/child.component';
+import { ForEachComponent } from './for-each/for-each.component';
 
 
 
@@ -26,7 +27,8 @@ import { ChildComponent } from './child/child.component';
     PaginationComponent,
     ColourComponent,
     LifecycleComponent,
-    ChildComponent
+    ChildComponent,
+    ForEachComponent
   ],
   exports: [
     MatButtonModule,
