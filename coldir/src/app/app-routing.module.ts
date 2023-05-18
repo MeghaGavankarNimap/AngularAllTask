@@ -8,6 +8,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { ChildComponent } from './child/child.component';
+import { ForEachComponent } from './for-each/for-each.component';
 
 
 
@@ -19,7 +20,9 @@ const routes: Routes = [
   {path:'colour',component:ColourComponent},
  {path:'pagination',component:PaginationComponent},
  {path:'lifecycle',component:LifecycleComponent},
- {path:'child',component:ChildComponent}
+ {path:'child',component:ChildComponent},
+ {path:'foreach',component:ForEachComponent}
+
 ];
 
 @NgModule({
