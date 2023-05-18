@@ -16,6 +16,7 @@ import { Ng2SearchPipe } from 'ng2-search-filter';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { ChildComponent } from './child/child.component';
 import { ForEachComponent } from './for-each/for-each.component';
+import { MatInputModule } from '@angular/material/input';
 
 
 
@@ -32,6 +33,7 @@ import { ForEachComponent } from './for-each/for-each.component';
   ],
   exports: [
     MatButtonModule,
+    
    
     
     
@@ -45,6 +47,10 @@ import { ForEachComponent } from './for-each/for-each.component';
     MatPaginatorModule,
     MatTableModule,
     MatFormFieldModule,
+    MatInputModule
+   
+   
+ 
     
 
     

@@ -25,7 +25,7 @@
           
   
           <h3>Login form</h3>
-          <form class="example-form" [formGroup]="signIn" (ngSubmit)="login(signIn.value)">
+          <form class="example-form" [formGroup]="signIn" (ngSubmit)="login()">
             <mat-form-field class="example-full-width">
               <mat-label>Username</mat-label>
               <input matInput name="username" formControlName="username">

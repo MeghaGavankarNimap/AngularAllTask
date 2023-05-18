@@ -14,25 +14,54 @@ import { UsersService } from '../users.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+  
+   
+ 
+  
+  mydata:any;
+  val:any;
+  
+  
+  // constructor(myuserservice:MyuserService){}
   signIn=new FormGroup({
     username:new FormControl(),
     pass:new FormControl(),
 
 
   });
-  data: any;
- 
-  constructor(private userservice:UsersService ,private router:Router){}
 
-login(data:any){
-  this.userservice.login(data).subscribe(data=>{
-    console.log(data);
-    // localStorage.setItem("Token",data.token)
-    // this.router.navigate(['/home'])
-    
-   
-  })
-}
+
+  constructor(private http:HttpClient,private route:Router,private myuserservice:UsersService) { }
+  
+  // url="http://localhost:3000/users";
+login(){
+    this.http.get<any>('http://localhost:3000/users').subscribe(res=>{
+      console.log(res);
+     const user=res.find((a:any)=>{
+      return a.username==this.signIn.value.username && a.pass==this.signIn.value.pass
+     });
+     console.log(user)
+     if (user){
+      // alert("login succesful");
+      localStorage.setItem('myuser',JSON.stringify(user))
+      this.route.navigate(['/home'])
+      
+     }
+     else{
+      alert("invalid username or password");
+       this.signIn.reset();
+      // this.route.navigate(['/login'])
+     }
+    });
+  }
+  
+
+
+
+
+  
+
+
 
 
 }

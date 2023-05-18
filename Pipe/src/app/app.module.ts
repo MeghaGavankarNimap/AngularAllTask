@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { CustompipeComponent } from './custompipe/custompipe.component';
 
 import { CustomPipe } from './custom.pipe';
+import { CachingComponent } from './caching/caching.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CustomPipe } from './custom.pipe';
    
     CustompipeComponent,
        
-        CustomPipe
+        CustomPipe,
+                CachingComponent
   ],
   imports: [
     BrowserModule,
