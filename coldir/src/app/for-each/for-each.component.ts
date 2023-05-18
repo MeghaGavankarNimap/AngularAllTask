@@ -11,12 +11,12 @@ export class ForEachComponent implements OnInit {
   }
 
   words: string[] = ['hello', 'bird', 'table', 'football', 'pipe', 'code'];
-  titleCaseWords: string[] = [];
+  Words: string[] = [];
 
   convertToTitleCase() {
     this.words.forEach(word => {
-      const titleCaseWord = word.charAt(0).toUpperCase() + word.slice(1);
-      this.titleCaseWords.push(titleCaseWord);
+      const Word = word.charAt(0).toUpperCase() + word.slice(1);
+      this.Words.push(Word);
     });
   }
 
