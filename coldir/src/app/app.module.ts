@@ -10,10 +10,11 @@ import { ColourComponent } from './colour/colour.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
-import { MatFormFieldModule, MatLabel, matFormFieldAnimations } from '@angular/material/form-field';
+import { MatFormField, MatFormFieldModule, MatLabel, matFormFieldAnimations } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { Ng2SearchPipe } from 'ng2-search-filter';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { ChildComponent } from './child/child.component';
 
 
 
@@ -24,11 +25,12 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
     ColorchangeDirective,
     PaginationComponent,
     ColourComponent,
-    LifecycleComponent
+    LifecycleComponent,
+    ChildComponent
   ],
   exports: [
     MatButtonModule,
-    MatFormFieldModule,
+   
     
     
  
@@ -40,6 +42,19 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
     BrowserAnimationsModule,
     MatPaginatorModule,
     MatTableModule,
+    MatFormFieldModule,
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     

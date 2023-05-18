@@ -3,8 +3,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import {AfterViewInit, ViewChild} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
-import { MatFormField } from '@angular/material/form-field';
-import {MatSort} from '@angular/material/sort';
+import { MatFormField, MatLabel } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
+
 
 
 

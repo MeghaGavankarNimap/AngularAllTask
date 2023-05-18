@@ -1,10 +1,44 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { interval, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-lifecycle',
   templateUrl: './lifecycle.component.html',
   styleUrls: ['./lifecycle.component.scss']
 })
-export class LifecycleComponent {
+export class LifecycleComponent implements OnInit, OnDestroy {
+
+
+  counter = interval(1000);
+
+
+  counterstop: any;
+  ngOnInit(): void {
+    this.counterstop = this.counter.subscribe((val) => {
+      console.log(val);
+    })
+
+  }
+
+  unsubscribe() {
+    this.counterstop.unsubscribe();
+  }
+
+  ngOnDestroy(): void {
+    if (this.counterstop) {
+      this.counterstop.unsubscribe();
+    }
+
+  }
+
+
 
 }
+
+
+
+
+
+
+
+
