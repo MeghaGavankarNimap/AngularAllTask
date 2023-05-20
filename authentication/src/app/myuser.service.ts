@@ -5,6 +5,7 @@ import{HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class MyuserService {
+  currentUserValue: any;
   navigate(arg0: string[]) {
     throw new Error('Method not implemented.');
   }

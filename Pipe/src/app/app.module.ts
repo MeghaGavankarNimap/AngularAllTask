@@ -8,21 +8,25 @@ import { CustompipeComponent } from './custompipe/custompipe.component';
 
 import { CustomPipe } from './custom.pipe';
 import { CachingComponent } from './caching/caching.component';
+import { MyuserService } from './myuser.service';
+import { HttpClientModule } from '@angular/common/http';
+import { CachService } from './cach.service';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-   
     CustompipeComponent,
-       
-        CustomPipe,
-                CachingComponent
+    CustomPipe,
+    CachingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+
   ],
-  providers: [],
+  providers: [MyuserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -11,18 +11,20 @@ import { UsersService } from './users.service';
 
 
 const routes: Routes = [
-  {
-    path: 'register',
-    loadChildren: () => import('./register/register.module').then(m => m.RegisterModule)
-  },
   // {
-  //   path: 'login',
-  //   loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
+  //   path: 'register',
+  //   loadChildren: () => import('./register/register.module').then(m => m.RegisterModule)
   // },
-   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
-  },
+  // // {
+  // //   path: 'login',
+  // //   loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
+  // // },
+  //  {
+  //   path: 'home',
+  //   loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+  // },
+  {path:'home',component:HomeComponent},
+  {path:'register',component:RegisterComponent},
   {path:'login',component:LoginComponent},
   // {path:'',component:HomeComponent}
   

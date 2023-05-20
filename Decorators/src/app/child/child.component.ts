@@ -8,9 +8,8 @@ import { Component, Input } from '@angular/core';
 export class ChildComponent {
 
   @Input() display:any;
+  @Input()namedata:any;
 
   
-  editCustomer(){
-    
-  }
+
 }

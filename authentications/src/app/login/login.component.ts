@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component ,OnInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-import { FormControl, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
 import { UsersService } from '../users.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { FormControl} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, } from '@angular/forms';
+import { first } from 'rxjs/operators';
 
 
 
@@ -14,6 +15,10 @@ import { UsersService } from '../users.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+  signinform = this.formBuilder.group({
+    username: ['', Validators.required],
+    pass: ['', Validators.required]
+});
   
    
  
@@ -23,48 +28,59 @@ export class LoginComponent {
   
   
   // constructor(myuserservice:MyuserService){}
-  signIn=new FormGroup({
-    username:new FormControl(),
-    pass:new FormControl(),
+  // signIn: FormGroup<{ username: FormControl<string | null>; password: FormControl<string | null>; }> | undefined;
+  returnUrl: any;
+  loading: boolean | undefined;
+  error: any;
+  submitted: boolean | undefined;
+  UsersService: any;
+  // signIn=new FormGroup({
+  //   username:new FormControl(),
+  //   pass:new FormControl(),
 
 
-  });
+  // });
+  AuthenticationService: any;
+  
 
 
-  constructor(private http:HttpClient,private route:Router,private myuserservice:UsersService) { }
+ 
   
   // url="http://localhost:3000/users";
-login(){
-    this.http.get<any>('http://localhost:3000/users').subscribe(res=>{
-      console.log(res);
-     const user=res.find((a:any)=>{
-      return a.username==this.signIn.value.username && a.pass==this.signIn.value.pass
-     });
-     console.log(user)
-     if (user){
-      // alert("login succesful");
-      localStorage.setItem('myuser',JSON.stringify(user))
-      this.route.navigate(['/home'])
-      
-     }
-     else{
-      alert("invalid username or password");
-       this.signIn.reset();
-      // this.route.navigate(['/login'])
-     }
-    });
-  }
-  
 
 
 
-
-  
-
-
-
-
+constructor(
+  private formBuilder: FormBuilder,
+  private route: ActivatedRoute,
+  private router: Router,
+  private authenticationService:UsersService
+) { 
+  // redirect to home if already logged in
+  // if (this. AuthenticationService.currentUserValue) { 
+  //     this.router.navigate(['/']);
+  // }
 }
-  
+
+ngOnInit() {
 
 
+  // get return url from route parameters or default to '/'
+  this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+}
+
+login(signinform:any) {
+  this.submitted = true;
+
+  this.loading = true;
+  this.authenticationService.login(signinform)
+      .pipe(first())
+      .subscribe(
+        (data: any) => {
+              this.router.navigate(['/home']);
+          },
+        ( error: any) => {
+              this.error = error;
+              this.loading = false;
+          });
+}}

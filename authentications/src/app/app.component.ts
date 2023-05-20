@@ -1,4 +1,7 @@
 import { Component, ViewContainerRef } from '@angular/core';
+import {User, UsersService } from './users.service';
+import { Router } from 'express';
+
 
 
 @Component({
@@ -8,4 +11,18 @@ import { Component, ViewContainerRef } from '@angular/core';
 })
 export class AppComponent {
   title = 'routeGuard';
+  currentUser!: User;
+
+
+  // constructor(
+  //     private router: Router,
+  //     private authenticationService: UsersService
+  // ) {
+  //     this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+  // }
+
+  // logout() {
+  //     this.authenticationService.logout();
+  //     // this.router.navigate(['/login']);
+  // }
 }

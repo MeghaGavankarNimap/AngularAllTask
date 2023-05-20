@@ -9,13 +9,13 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersService } from './users.service';
 import { ChildComponent } from './child/child.component';
-import { ChildsComponent } from './childs/childs.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ChildComponent,
-    ChildsComponent
+ 
     
     
   ],

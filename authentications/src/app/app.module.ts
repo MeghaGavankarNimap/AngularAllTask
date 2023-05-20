@@ -14,7 +14,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 
 
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 
@@ -27,6 +27,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { UsersService } from './users.service';
 import { HomeComponent } from './home/home.component';
+import { JwtInterceptor } from './jwt.interceptor';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { HomeComponent } from './home/home.component';
     
     
   ],
-  providers: [UsersService],
+  providers: [UsersService, { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

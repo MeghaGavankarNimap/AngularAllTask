@@ -45,6 +45,7 @@ export class RegisterComponent {
       this.mydata=data;
       alert("regiserd successfully");
       console.log(this.mydata);
+      // navigate to logn
     })
   }
 

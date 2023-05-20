@@ -36,7 +36,11 @@ ngOnInit():void{
   this.getAllUsers();
 }
 
-editCustomer(allusers:any){
+edit(customer:any){
 
+
+}
+transferdata(new){
+  
 }
 }

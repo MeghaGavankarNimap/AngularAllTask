@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-custompipe',
   templateUrl: './custompipe.component.html',
