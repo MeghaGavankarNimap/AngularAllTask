@@ -10,7 +10,7 @@ import { Router } from 'express';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'routeGuard';
+  title = 'authGuard';
   currentUser!: User;
 
 
