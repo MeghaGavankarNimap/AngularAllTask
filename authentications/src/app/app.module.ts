@@ -28,6 +28,10 @@ import { MatCardModule } from '@angular/material/card';
 import { UsersService } from './users.service';
 import { HomeComponent } from './home/home.component';
 import { JwtInterceptor } from './jwt.interceptor';
+import { PermissionsService } from './auth.guard';
+import { RegisterModule } from './register/register.module';
+import { LoginModule } from './login/login.module';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
@@ -53,11 +57,11 @@ import { JwtInterceptor } from './jwt.interceptor';
     MatIconModule,
     MatCardModule,
     MatSlideToggleModule,
-    MatInputModule
-    
+    MatInputModule,
+   
     
   ],
-  providers: [UsersService, { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+  providers: [UsersService,PermissionsService,{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
  ],
   bootstrap: [AppComponent]
 })

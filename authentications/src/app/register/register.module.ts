@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RegisterModuleRoutingModule } from './register-routing.module';
+import { RegisterComponent } from './register.component';
+
+
 
 
 
