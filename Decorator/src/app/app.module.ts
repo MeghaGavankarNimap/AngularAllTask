@@ -7,16 +7,20 @@ import { ChildComponent } from './child/child.component';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { UsersService } from './users.service';
+import { ParentComponent } from './parent/parent.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChildComponent
+    ChildComponent,
+    ParentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
    
   ],
   providers: [UsersService],

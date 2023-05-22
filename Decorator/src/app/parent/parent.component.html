@@ -1,0 +1,30 @@
+<!-- <p>parent works!</p> -->
+
+<!-- <input #name class="form-control"> -->
+<!-- <a (click)="show(name.value)">submit</a> -->
+<!-- <ul>
+    <li *ngFor="let customer of allusers">
+      {{ customer.id }}--{{ customer.name }}--{{ customer.email }}
+      <button routerLink="child" (click)="editCustomer(customer)">Edit</button>
+    </li>
+  </ul>
+   -->
+  
+  <!-- <app-child [name]="name"></app-child> -->
+  
+  <!-- <app-child [id]="id" [name]="name"  [email]="email"></app-child>
+  <app-child (editing)="edit($event)"></app-child> -->
+  <!-- <app-child [name]="name"></app-child>
+  <app-child [email]="email"></app-child> -->
+  <h2>Customer List</h2>
+  <ul>
+    <li *ngFor="let customer of customers">
+      {{ customer.name }} - {{ customer.email }}
+      <button (click)="editCustomer(customer)">Edit</button>
+    </li>
+  </ul>
+  <app-child
+    *ngIf="selectedCustomer"
+    [customer]="selectedCustomer"
+    (customerUpdated)="updateCustomer($event)"
+  ></app-child>

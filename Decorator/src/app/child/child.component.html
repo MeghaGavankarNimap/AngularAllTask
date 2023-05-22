@@ -13,3 +13,12 @@
    
 </form> -->
 <!-- <button (click)="emitData(value)">Update</button> -->
+<h2>Edit Customer</h2>
+
+  <label for="name">Name:</label>
+  <input type="text" id="name" [(ngModel)]="customer.name" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" [(ngModel)]="customer.email" required>
+
+  <button type="submit" (click)="submitForm()">Save</button>

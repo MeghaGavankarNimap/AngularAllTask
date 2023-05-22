@@ -1,18 +1,2 @@
 
-<!-- <input #name class="form-control"> -->
-<!-- <a (click)="show(name.value)">submit</a> -->
-<ul>
-  <li *ngFor="let customer of allusers">
-    {{ customer.id }}--{{ customer.name }}--{{ customer.email }}
-    <button routerLink="child" (click)="editCustomer(customer)">Edit</button>
-  </li>
-</ul>
-
-
-<app-child [name]="name"></app-child>
-
-<!-- <app-child [id]="id" [name]="name"  [email]="email"></app-child>
-<app-child (editing)="edit($event)"></app-child> -->
-<!-- <app-child [name]="name"></app-child>
-<app-child [email]="email"></app-child> -->
 <router-outlet></router-outlet>
