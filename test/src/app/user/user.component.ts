@@ -18,26 +18,10 @@ export class UserComponent {
 
   constructor(private http:HttpClient) { }
   ngOnInit():void{
-    this.http.get<any>('http://localhost:3000/users').subscribe(data=>{
+    this.http.get<any>('http://localhost:3000/user').subscribe(data=>{
       this.mydata=data;
     })
   }
   
-  // ngOnInit():void{
-  //   this.myuser=this.userservice.getUser();
-  //   console.log(this.myuser);
-  //   // this.getalluser();
-  //   // this.myuser=this.userservice.getUser().subscribe(data=>{
-      
-  //   // });
-  // }
-
-  // // getalluser(){
-  // //   this.userservice.getUser().subscribe(data=>{
-  // //     console.log(data);
-  // //     // this.myuser=data;
-  // //   });
-
-  // // }
-
+  
 }

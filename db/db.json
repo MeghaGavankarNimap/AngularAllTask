@@ -1,56 +1,7 @@
 {
   "users": [
-    {
-      "id": 1,
-      "username": "nehapatil",
-      "password": "neha@123"
-    },
-    {
-      "username": "abc",
-      "password": null,
-      "id": 2
-    },
-    {
-      "username": "xyz",
-      "password": null,
-      "id": 3
-    },
-    {
-      "username": "xyz",
-      "password": null,
-      "id": 4
-    },
-    {
-      "username": "abc",
-      "password": null,
-      "id": 5
-    },
-    {
-      "username": "abc",
-      "password": null,
-      "id": 6
-    },
-    {
-      "username": "abc",
-      "password": null,
-      "id": 7
-    },
-    {
-      "username": "abc",
-      "pass": "abc",
-      "password": null,
-      "id": 8
-    },
-    {
-      "username": "abc",
-      "pass": "abc",
-      "id": 9
-    },
-    {
-      "username": "teja",
-      "pass": "teja@123",
-      "id": 10
-    },
+    
+   
     {
       "username": "teja",
       "pass": "teja@123",
@@ -166,11 +117,7 @@
       "passord": "",
       "id": 33
     },
-    {
-      "username": "nimap",
-      "passord": "",
-      "id": 34
-    },
+    
     {
       "username": "nimap",
       "pass": "nimap@123",
@@ -221,16 +168,7 @@
       "pass": "fsdf",
       "id": 44
     },
-    {
-      "username": "abc",
-      "pass": "fsdf",
-      "id": 45
-    },
-    {
-      "username": "abc",
-      "pass": "fsdf",
-      "id": 46
-    },
+    
     {
       "username": "abc",
       "pass": "fsdf",

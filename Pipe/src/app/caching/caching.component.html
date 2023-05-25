@@ -1,3 +1,8 @@
 <p>caching works!</p>
 {{ data|json}}
 <button (click)=" ShowData()">Show data</button>
+<button (click)="clearCache()">Clear Cache</button>
+<div *ngIf="data">
+  <!-- Display your data here -->
+</div>
+`

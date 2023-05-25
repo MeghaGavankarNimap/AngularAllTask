@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home/home.component';
+// import { HomeComponent } from './home/home.component';
 import { UserService } from '../user.service';
 
 
@@ -10,13 +10,13 @@ import { UserService } from '../user.service';
 
 @NgModule({
   declarations: [
-    HomeComponent
+    // HomeComponent
   ],
   imports: [
     CommonModule
   ],
   exports:[
-    HomeComponent
+    // HomeComponent
   ]
 })
 export class HomeModule { }

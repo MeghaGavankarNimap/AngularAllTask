@@ -1,22 +1,24 @@
-<p>user works!</p>
+<!-- <p>user works!</p> -->
 
 <!-- {{myuser | json }} -->
-<div *ngFor="let user of mydata">
-<h3>{{ user.id }}{{ user.username }}{{ user.pass }}</h3>
 
-</div>
-<!-- {{ mydata| json }} -->
-<!-- <table mat-table []="id">
-    <ng-container matColumnDef="score">
-        <th mat-header-cell *matHeaderCellDef> Score </th>
-        <td mat-cell *matCellDef="let user"> {{user.id}} </td>
-      </ng-container>
-  </table> -->
-
-  <!-- <table mat-table []="myDataArray">
-    <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef> Score </th>
-        <td mat-cell *matCellDef="let user"> {{user.id}} </td>
-      </ng-container>
-  </table> -->
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">USERNAME</th>
+      <th scope="col">PASSWORD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of mydata">
+      <!-- <th scope="row">1</th> -->
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+    </tr>
+   
+    
+  </tbody>
+</table>
   

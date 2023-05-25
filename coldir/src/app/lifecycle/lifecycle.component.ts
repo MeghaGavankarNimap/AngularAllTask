@@ -9,7 +9,7 @@ import { interval, Observable } from 'rxjs';
 export class LifecycleComponent implements OnInit, OnDestroy {
 
 
-  counter = interval(1000);
+  counter = interval(6000);
 
 
   counterstop: any;

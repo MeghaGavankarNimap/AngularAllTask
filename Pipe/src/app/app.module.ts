@@ -10,7 +10,7 @@ import { CustomPipe } from './custom.pipe';
 import { CachingComponent } from './caching/caching.component';
 import { MyuserService } from './myuser.service';
 import { HttpClientModule } from '@angular/common/http';
-import { CachService } from './cach.service';
+
 
 
 @NgModule({

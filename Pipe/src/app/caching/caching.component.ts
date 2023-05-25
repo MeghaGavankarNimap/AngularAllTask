@@ -20,13 +20,17 @@ export class CachingComponent {
   constructor(private myservice:MyuserService){}
 
   ShowData(){
-    this.myservice.GetAllData().subscribe(val=>{
-      console.log(val);
-     this.data=val;
+    this.myservice.GetAllData().subscribe(data=>{
+      console.log(data);
+     this.data=data;
     })
   }
-// store Map data
-// stateMap=new Map<val>;
 
 
+clearCache(): void {
+    this.myservice.clearCache();
+    this.data = null;
+  }
 }
+
+

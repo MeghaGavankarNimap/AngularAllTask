@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AboutComponent } from './about/about.component';
+
 
 
 
 @NgModule({
   declarations: [
-    AboutComponent
+   
     
   
     
@@ -16,7 +16,7 @@ import { AboutComponent } from './about/about.component';
   ],
 
   exports:[
-    AboutComponent
+  
 
   ]
 })
