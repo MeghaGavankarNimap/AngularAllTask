@@ -15,9 +15,9 @@ export class LifecycleComponent implements OnInit, OnDestroy {
   counterstop: any;
   val: any;
   ngOnInit(): void {
-    this.counterstop = this.counter.subscribe((val) => {
-      // Text=this.val;
-      console.log(val);
+    this.counterstop = this.counter.subscribe((val)=>{
+      
+    
     })
 
   }

@@ -1,0 +1,79 @@
+<p>rxjs works!</p>
+<!-- <input type="text" [formControl]="searchControl" placeholder="Search by Username or Email"> -->
+
+<input type="text" [formControl]="searchControl" placeholder="Search by Username or Email">
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of filteredUsers$ | async">
+      <td>{{ user.username }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.phone }}</td>
+      <td>{{ user.gender }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+<!-- 
+<form #searchForm="ngForm">
+    <div class="mt-3">
+        <input type="test"  required name="searchTerm" class="form-Control form-Control-lg" ngModel>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      
+    </tbody>
+  </table> -->
+<!-- <table>
+
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users ">
+      <td>{{ user.username }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.phone }}</td>
+      <td>{{ user.gender }}</td>
+    </tr> -->
+
+    
+  <!-- </tbody>
+</table> --> 

@@ -24,9 +24,6 @@ export class UsersService {
   constructor(private http: HttpClient) {
     this.currentUserSubject = new BehaviorSubject(JSON.parse(localStorage.getItem('currentUser')!));
     this.currentUser = this.currentUserSubject.asObservable();
-
-
-
 }
 
 
@@ -37,8 +34,6 @@ getAll() {
 public get currentUserValue(){
   return this.currentUserSubject.value;
 }
-
-
 
 login(signinform:any) {
   return this.http.post<any>(`http://localhost:4000/users/authenticate`, signinform)

@@ -10,6 +10,8 @@ import { CustomPipe } from './custom.pipe';
 import { CachingComponent } from './caching/caching.component';
 import { MyuserService } from './myuser.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CookiesComponent } from './cookies/cookies.component';
+import {CookieService} from 'ngx-cookie-service';
 
 
 
@@ -18,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     CustompipeComponent,
     CustomPipe,
-    CachingComponent
+    CachingComponent,
+    CookiesComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
 
   ],
-  providers: [MyuserService],
+  providers: [MyuserService,CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
