@@ -5,14 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { FormControl, FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
-FormControl
+import { SubjectComponent } from './subject/subject.component';
+import { Subject2Component } from './subject2/subject2.component';
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    RxjsComponent
+    RxjsComponent,
+    SubjectComponent,
+    Subject2Component
   ],
   imports: [
     BrowserModule,

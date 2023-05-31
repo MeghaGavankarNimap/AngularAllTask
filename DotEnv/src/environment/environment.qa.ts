@@ -1,6 +1,6 @@
 export const environemnt={
     production:true,
-    hostURL:'http://localhost',
+    hostURL:'http://qa.site',
     username:'user1prod',
     port:4200,
     env_name:'localprod',
