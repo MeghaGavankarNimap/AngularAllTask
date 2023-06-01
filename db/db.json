@@ -332,5 +332,25 @@
       "name": "keshav",
       "email": "keshav@gmail.com"
     }
+  ],
+  "Customer": [
+    {
+      "id": 1,
+      "username": "teja",
+      "pass": "1234",
+      "role": "admin"
+    },
+    {
+      "username": "meera",
+      "pass": "9876",
+      "role": "admin",
+      "id": 2
+    },
+    {
+      "username": "ram",
+      "pass": "5678",
+      "role": "supervisor",
+      "id": 3
+    }
   ]
 }

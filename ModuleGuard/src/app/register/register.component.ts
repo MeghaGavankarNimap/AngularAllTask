@@ -20,9 +20,9 @@ export class RegisterComponent {
 
   });
 
-  url="http://localhost:3000/users";
+  url=" http://localhost:3000/Customer";
   saveuser(val:any){
-    this.http.post<any>('http://localhost:3000/users',val).subscribe(data=>{
+    this.http.post<any>(' http://localhost:3000/Customer',val).subscribe(data=>{
       this.mydata=data;
       alert("regiserd successfully");
       console.log(this.mydata);

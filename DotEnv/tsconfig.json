@@ -4,6 +4,8 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    // added types manually for process.env
+    // "types": ["node"],
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,

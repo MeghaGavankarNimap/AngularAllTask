@@ -11,6 +11,10 @@ import { environemnt } from 'src/environment/environment.prod';
 })
 export class AppComponent {
   title = 'DotEnv';
-  apiUrl = envConfig.API_URL;
-  apiKey = envConfig.API_KEY;
+  url:any;
+  constructor(){
+    // this.url=environemnt.hostURL;
+    // this.url=process.env['hostURL']
+
+  }
 }

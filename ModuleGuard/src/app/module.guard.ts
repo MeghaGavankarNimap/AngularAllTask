@@ -3,14 +3,11 @@ import { CanActivateFn, Router } from '@angular/router';
 
 @Injectable()
 export class PermissionsService {
+ 
   constructor(private route:Router){}
   canActivate(currentUser: any) {
     if(currentUser) {
-      if(){
-        currentUser.role=='admin'
-        return true
-      }
-      
+      return true
     }
     else{
       
